@@ -1,0 +1,222 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f0f1c, #44005d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* حاوية التطبيق */
+.app-wrapper {
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+.todo-container {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+/* العنوان */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* إدخال المهام */
+.task-input {
+  display: flex;
+  margin-bottom: 1.5rem;
+  gap: 10px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: none;
+  
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.task-input input::placeholder {
+  color: #ccc;
+}
+
+.new-task-btn {
+  background: #ff59c1;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.new-task-btn:hover {
+  background: #ff2fa8;
+}
+
+/* كروت المهام */
+.task-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  
+}
+
+.task-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+  
+  margin-bottom: 0.5rem;
+}
+
+/* وصف المهمة */
+.task-desc {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 0.5rem;
+  width: 20px;
+  height: auto;
+}
+
+
+.task-desc {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-height: 80px; /* ⬅️ الطول الثابت للصندوق */
+  overflow-y: auto;  /* ⬅️ تفعيل Scroll عمودي */
+  word-wrap: break-word;
+  white-space: normal;
+  padding: 0.5rem;
+  border-radius: 8px;
+
+ 
+  scrollbar-width: thin; /* ⬅️ نحافة Scroll (Firefox) */
+}
+
+/* لجعل Scroll شكله ناعم (Chrome + Edge) */
+.task-desc::-webkit-scrollbar {
+  width: 6px;
+}
+.task-desc::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+.task-desc::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+/* أيقونات */
+.task-icons {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  gap: 12px;
+}
+
+.task-icons button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.task-icons button:hover {
+  transform: scale(1.2);
+}
+
+
+
+.edit-input {
+  width: 100%;
+  min-height: 40px;
+  max-height: 150px;
+  resize: vertical; /* يسمح فقط بتكبير الطول */
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  overflow-y: auto;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.edit-input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f0f1c, #44005d);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+}
+
+.todo-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 380px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.todo-container h1 {
+  font-size: 2em;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.filter-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btns button {
+  background: linear-gradient(to right, #3f0d50, #59095f);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.input-area {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3b1d3a;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.add-btn {
+  background: #ddd;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, #2e143f, #31194d);
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.todo-text p {
+  margin: 5px 0 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.todo-text strong {
+  display: block;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.todo-actions button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 6px;
+  color: white;
+}
+button.save-btn {
+  background-color: #4caf50; /* أخضر */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button.save-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button.save-btn:active {
+  transform: scale(0.97);
+}
+.saved-msg {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 15px;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+.task-edit-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f8e9;
+  border: 1px solid #c5e1a5;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.task-edit-input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 4px #a5d6a7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.task-edit-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0fdf4;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+  gap: 10px;
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+}
+
+.task-edit-input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 5px #bbf7d0;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #22c55e;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #16a34a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.task-edit {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.task-edit input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.task-edit input:focus {
+  border-color: #1976d2;
+}
+
+.task-edit button {
+  background-color: #1976d2;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.task-edit button:hover {
+  background-color: #125ba3;
+}
+/* 🎯 تنسيق وضع التعديل */
+.edit-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-mode input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.edit-mode input::placeholder {
+  color: #ccc;
+}
+
+.edit-mode button {
+  background: #36e0e0;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #222;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.task-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: green;
+  font-size: 20px;
+}
+.edit-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-inline {
+  width: 70%;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.edit-inline:focus {
+  border-color: #007bff;
+}
+
+.save-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: green;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.edit-input {
+  width: 100%;
+  min-height: 40px;
+  resize: vertical; /* يسمح بتكبير الطول فقط */
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.edit-input:focus {
+  border-color: #1976d2;
+}
+.edit-input {
+  width: 70%;
+  min-height: 40px;
+  resize: vertical; /* يسمح بتكبير الطول فقط */
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+      background-color: aqua;
+
+}
+
+.edit-input:focus {
+  border-color: #1976d2;
+}

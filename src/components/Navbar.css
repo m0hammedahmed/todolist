@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.nav-btn {
+  background: linear-gradient(135deg, #ff59c1, #a803a8);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.nav-btn.active {
+  border: 2px solid white;
+  box-shadow: 0 0 8px white;
+}
